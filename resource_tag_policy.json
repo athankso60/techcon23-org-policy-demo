@@ -1,0 +1,16 @@
+{
+    "name": "organizations/[ORGANIZATIONID]/policies/custom.gkeIdentityDefaults",
+    "spec": {
+        "rules": [
+            {
+                "condition": {
+                    "expression": "resource.matchTag(\"[ORGANIZATIONID]/ENV\", \"PROD\")"
+                },
+                "enforce": true
+            },
+            {
+                "enforce": false
+            }
+        ]
+    }
+}
